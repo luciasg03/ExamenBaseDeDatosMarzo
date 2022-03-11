@@ -186,9 +186,14 @@ SELECT COUNT(*) FROM capitulos;
 
 -- 15.- ¿Que raza de personaje es más bajo de media?
 
-SELECT cf.altura, r.nombre
-from raza r, personaje p, carasteristicas_fisicas cf
-where r.id=p.id_raza
-and p.id_fisicas=cf.id
-ORDER by cf.altura DESC
-limit 1;
+--CONSULTA
+--SELECT cf.altura, r.nombre
+--from raza r, personaje p, carasteristicas_fisicas cf
+--where r.id=p.id_raza
+--and p.id_fisicas=cf.id
+--ORDER by cf.altura asc
+--limit 1;
+
+--RESPUESTA
+--NULL Elfo Silvano
+
