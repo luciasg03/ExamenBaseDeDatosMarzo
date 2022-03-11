@@ -159,7 +159,15 @@ SELECT COUNT(*) FROM capitulos;
 
 -- 10.- Habilidades que no estuvieran en ninguna anecdota
 
+ 
+
 -- 11.- ¿Cuantos personajes hubo en cada anecdota?
+
+--CONSULTA
+--SELECT count(DISTINCT p.id), a.id
+--from personaje p,  mn_personaje_anectdota pa, anecdotas a
+--where p.id=pa.id_personaje
+--and pa.id_anecdota=a.id;
 
 -- 12.- Listado de Personajes de cada capitulo
 
@@ -167,4 +175,20 @@ SELECT COUNT(*) FROM capitulos;
 
 -- 14.- ¿Que raza tiene la constitución más baja?
 
+--CONSULTA
+--select min(cr.constitucion), r.nombre
+--from caracteristicas_rol cr, personaje p, raza r
+--where r.id=p.id_raza
+--and p.id_rol=cr.constitucion;
+
+--RESPUESTA
+--387 Elfo
+
 -- 15.- ¿Que raza de personaje es más bajo de media?
+
+SELECT cf.altura, r.nombre
+from raza r, personaje p, carasteristicas_fisicas cf
+where r.id=p.id_raza
+and p.id_fisicas=cf.id
+ORDER by cf.altura DESC
+limit 1;
