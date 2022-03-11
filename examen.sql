@@ -131,7 +131,31 @@ SELECT COUNT(*) FROM capitulos;
 
 -- 8.- ¿Cual es la media de los personajes de una persona?
 
+--CONSULTA
+--SELECT AVG(p.id)
+--from personaje p, persona pe
+--where p.id_persona = pe.id;
+
+--RESPUESTA
+--10.6471
+
+
+
 -- 9.- ¿Cual es la raza habitual de 'Pablo Rodriguez'?
+
+--CONSULTA
+--SELECT r.nombre
+--from raza r, personaje p, persona pe
+--where r.id=p.id_raza
+--and p.id_persona=pe.id
+--and pe.nombre='Pablo'
+--and pe.apellidos='Rodriguez';
+
+--RESPUESTA
+
+--Enano
+
+
 
 -- 10.- Habilidades que no estuvieran en ninguna anecdota
 
